@@ -10,9 +10,13 @@ function Index({ pokemon }) {
     <div style={myStyle}>
       <h1>Here are some pokemon:</h1>
       {pokemon.length &&
-        pokemon.map((poke) => {
+        pokemon.map((poke, index) => {
           const name = poke.name.charAt(0).toUpperCase() + poke.name.slice(1);
-          return <li key={poke.name}>{name}</li>;
+          return (
+            <li key={poke.name}>
+              <a href={`pokemon/${index}`}>{name}</a>
+            </li>
+          );
         })}
     </div>
   );
