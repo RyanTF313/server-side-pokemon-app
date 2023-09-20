@@ -14,7 +14,10 @@ function Show({ pokemon }) {
         <a href="/pokemon">Back</a>
       </p>
       <h2>{name}</h2>
-      <img src={pokemon.img + ".jpg"} alt={name + " image"} />
+      <img
+        src={!pokemon.img.includes(".png") ? pokemon.img + ".jpg" : pokemon.img}
+        alt={name + " image"}
+      />
       <p>height: {pokemon.height}</p>
       <p>weight: {pokemon.weight}</p>
       <p>types: </p>

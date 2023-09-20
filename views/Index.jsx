@@ -8,6 +8,7 @@ const myStyle = {
 function Index({ pokemon }) {
   return (
     <div style={myStyle}>
+      <h2><a href="pokemon/new">Catch a new pokemon!</a></h2>
       <h1>Here are some pokemon:</h1>
       {pokemon.length &&
         pokemon.map((poke, index) => {
